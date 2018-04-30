@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Material Design Lite (MDL) stylesheet and related fonts-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+
+	<!--our own stylesheet-->
+	<link rel="stylesheet" href="css/main.css">
+
+
+    <title>INFO 344</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to INFO 344!</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+			<form class="search-form">
+				<!--MDL input block: label content becomes placeholder text-->
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input type="text"
+						id="search-input"
+						class="mdl-textfield__input">
+					<label for="search-input" class="mdl-textfield__label">type the website you want</label>
+				</div>
+
+				<button type="submit" 
+					class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored mdl-button--icon">
+					<i class="material-icons">search</i>
+				</button>
+			</form>
+
+            <div class="query-results">
+				<!--we will add elements here via JavaScript-->       
+            </div>  
+        </div>
+    </main>
+
+	<!--Material Design Lite JavaScript library-->
+	<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>	
+
+	<!--.fetch() polyfill for browsers that don't yet support it yet (e.g., Safari)-->
+	<!--see http://caniuse.com/#feat=fetch-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.min.js"></script>
+	
+	<!--our application script-->
+	<script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+.mdl-textfield {
+    width:100%;
+}
+
+.page-content{
+    text-align: center;
+    margin-left:  auto;
+    margin-right: auto;
+    max-width: 500px
+}
+
+.channelbtn, .addChan{
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+a {
+    text-decoration: none;
+    color:white
+}
+
+h4{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.mdl-navigation img{
+    width: 50%;
+    height: 50%;
+    border-radius:50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mdl-navigation{
+    text-align: center
+}
+
+#events{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#msglist{
+    overflow-y: scroll;
+    height: 600px;
+    width: 620px
+}
+
+#msgInput{
+    text-align: right
+}
+
+.channelbtn{
+    min-width: 200px;
+    background-color: #E80C7A;
+    color: white
+}
+
+#newChanAdd, #chanEdit{
+    min-width: 250px;
+}
+
+#newChanAdd .mdl-textfield__input, #chanEdit .mdl-textfield__input {
+    max-width: 200px;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+#newChanAdd .is-focused, #chanEdit .is-focused{
+    max-width: 200px;
+}
+
+#newChanAdd .mdl-textfield__label, #chanEdit .mdl-textfield__label{
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+#addChanBtn, #EditChanBtn{
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-top:1em;
+}
+
+#chanList{
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+.btns{
+    text-align: center;
+}
+
+#outMsgBox, #innerMsgBox{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px
+}
+
+#addPersonList{
+    min-width: 300px;
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+#addPerson{
+    background-color: #42a5f5
+}
+
+#editChan{
+    background-color:#d4e157
+}
+
+#addChan{
+    background-color: #ffa726
+}
+
+#btnGroup{
+    text-align: center;
+}
+
+
+
+#join-leave{
+    min-width: 200px;
+}
+
+#message-username{
+    font-size: 20px;
+}
+
+.msgEditBtn{
+    font-size:15px;
+    color:palevioletred
+}
+
+.msgEditBtn:hover{
+    color:black  
+}
+
+.msgDeleteBtn{
+    font-size: 15px;
+    color: dimgrey;
+}
+
+.messageEdit{
+    width: 100%
+}
+
+#chatbotInput{
+    margin-right: auto;
+    margin-left: auto;
+    width: 620px;
+}
+
+#chatboxDisplay{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2em;
+    width:620px;
+    height: 200px;
+    /*background-image: url('../img/robot.png');*/
+}
+
+#chatboxDisplay img{
+    opacity: 0.2
+}
+
+#buttonDiv{
+    text-align: right;
+}
+
+#chatboxDisplay{
+text-align: center;
+}
+
+#robomsg{
+    opacity: 1;
+    color:red
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MinChat</title>
+
+    <script src="https://use.fontawesome.com/329d1d6129.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="./img/icon.png">
+
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title"><h3><a href="main.html">MinChat</a></h3></span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title"></span>
+            <nav class="mdl-navigation">
+                <div id="info" class="container">
+
+                </div>
+                <!--<div id = "chanList" class="container">
+                <h4>Channels</h4>
+
+                </div>-->
+                <hr>
+                <div class="container">
+                    <button id="editbtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored ">Edit info</button>
+                    <button id="signout" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Sign Out</button>
+                </div>
+
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div id="events">
+            <div id="btnGroup" class="container">                
+                <button id="channelSelecter" class="mdl-button mdl-js-button mdl-button--raised channelbtn">
+                    <!--current channel name goes here-->
+                </button>
+                <ul id="chanList" class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="channelSelecter">
+                    <!--channel list goes here-->
+                </ul>
+
+                <button id="addChan" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored addChan">
+                      <i class="material-icons">add</i>
+                </button>
+                <ul id="addChanForm" class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="addChan">
+                        <form id="newChanAdd">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <input class="mdl-textfield__input" type="text" id="chanName">
+                                <label class="mdl-textfield__label username">Channel Name</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <input class="mdl-textfield__input" type="text" id="chanDescr">
+                                <label class="mdl-textfield__label">Description</label>
+                            </div>
+                            <div class="btns">
+                                <label for="public" class="mdl-radio mdl-js-radio">
+                                    <input type="radio" id="public" name="radio" value="public" class="mdl-radio__button" checked>
+                                    <span class="mdl-radio__label">Public</span>
+                                </label>
+                                <label for="private" class="mdl-radio mdl-js-radio">
+                                    <input type="radio" id="private" name="radio" value="private" class="mdl-radio__button">
+                                    <span class="mdl-radio__label">Private</span>
+                                </label>
+                                <button id = "addChanBtn" type = "submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
+                </ul>
+                <button id="editChan" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored editChan">
+                      <i class="material-icons">edit</i>
+                </button>
+                <ul id="editChanForm" class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="editChan">
+                    <form id="chanEdit">
+                        <div class="mdl-textfield mdl-js-textfield editChanContainer">
+                            <input class="mdl-textfield__input" type="text" id="editChanName">
+                            <label class="mdl-textfield__label username">Channel Name</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield editChanContainer">
+                            <input class="mdl-textfield__input" type="text" id="editChanDescr">
+                            <label class="mdl-textfield__label">Description</label>
+                        </div>
+                        <div class="btns">
+                            <label for="edit-public" class="mdl-radio mdl-js-radio">
+                                <input type="radio" id="edit-public" name="radio" value="public" class="mdl-radio__button" checked>
+                                <span class="mdl-radio__label">Public</span>
+                            </label>
+                            <label for="edit-private" class="mdl-radio mdl-js-radio">
+                                <input type="radio" id="edit-private" name="radio" value="private" class="mdl-radio__button">
+                                <span class="mdl-radio__label">Private</span>
+                            </label>
+                            <div id="editBtns">
+                                <button id = "editChanBtn" type = "submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Change</button>
+                                <button id = "deleteChanBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Delete</button>
+                            </div>                         
+                        </div>
+                    </form>
+                </ul>
+
+                <button id="addPerson" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored addPerson">
+                      <i class="material-icons">person</i>
+                </button>
+                    <ul id="addPersonList" class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="addPerson">
+                    </ul>
+                <button id = "join-leave"class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"></button>
+                
+            </div>
+                <div id="msglist">
+                    <!--message list goes here-->
+                </div>
+
+                <form id='msgInput' class="input-group">
+                    <div id='txtbox' class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="textBox">
+                        <label class="mdl-textfield__label" for="textBox">Enter you message here...</label>
+                    </div>
+                    <button id="send" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Send</button>
+                </form>
+            </div>
+            <div id="chatbot">
+                <div id="chatboxDisplay">
+                    <h5 id='robomsg'>ask me anything...</h5>
+                    <img src='./img/robot.png' alt="">
+                </div>
+                <form id = "chatbotInput">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="chatbotText">
+                        <label class="mdl-textfield__label" for="chatbot">Text...</label>
+                    </div>
+                    <div id="buttonDiv">
+                        <button id="botSend" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Send</button>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+    </div>
+    <!--our application script-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
